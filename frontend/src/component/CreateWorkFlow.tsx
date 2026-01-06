@@ -1,15 +1,15 @@
 import { useState, useCallback } from 'react';
-import { ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge, type NodeChange, Position } from '@xyflow/react';
+import { ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { TriggerSheet } from './TriggerSheet';
-import { data } from 'react-router-dom';
+// import { data } from 'react-router-dom';
  
 export type NodeKind  ="price-trigger" | "time-trigger" | "hyperliquid" | "backpack"| "lighter"
 
 interface NodeType{
     data:{
         type: "action" | "trigger",
-        kind: NodeKind,
+        // kind: NodeKind,
         metadata: NodeMetaData
     }, id: string,
     position: {x: number, y: number}
@@ -45,12 +45,12 @@ export default function App() {
  
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      {!nodes.length && <TriggerSheet onSelect={(kind, metadata)=>{
+      {!nodes.length && <TriggerSheet onSelect={(metadata)=>{
         setNodes([...nodes,{
           id: Math.random().toString(),
           data:{
             type: "trigger",
-            kind,
+            // kind,
             metadata
           },
           position: {x:0, y:0}

@@ -8,14 +8,12 @@ import {
     SheetFooter,
     SheetHeader,
     SheetTitle,
-    SheetTrigger,
 } from "@/components/ui/sheet"
 import {
     Select,
     SelectContent,
     SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
@@ -33,9 +31,9 @@ const SUPORTED_TRIGGER =[{
 }]
 
 export const TriggerSheet = ({ onSelect }: {
-    onSelect: (kind: NodeKind, metaData: NodeMetaData) => void
+    onSelect: ( metaData: NodeMetaData) => void
 }) => {
-    const [metadata, setMetadata] = useState({})
+    const [metadata] = useState({})
 
     return <Sheet open={true}>
         {/* <SheetTrigger asChild>
@@ -56,7 +54,7 @@ export const TriggerSheet = ({ onSelect }: {
                                 {SUPORTED_TRIGGER.map(({id, title})=><>
                                     {/* <SelectLabel>{title}</SelectLabel> */}
                                     <SelectItem onSelect={()=>onSelect(
-                                        id, 
+                                        // id, 
                                         metadata
                                     )} value={id}>{title}</SelectItem>
                                 </>)}
