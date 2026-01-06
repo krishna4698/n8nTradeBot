@@ -1,4 +1,4 @@
-import type { NodeKind, NodeMetaData } from "./CreateWorkFlow"
+import type { NodeMetaData } from "./CreateWorkFlow"
 import { Button } from "@/components/ui/button"
 import {
     Sheet,
