@@ -49,7 +49,7 @@ export const TriggerSheet = ({ onSelect }: {
                     <Select>
                         <SelectTrigger className="w-full">
                             <SelectValue placeholder="Select a fruit" />
-                        </SelectTrigger>
+                        </SelectTrigger> 
                         <SelectContent>
                             <SelectGroup>
                                 {/* <SelectLabel>Fruits</SelectLabel> */}
@@ -63,7 +63,7 @@ export const TriggerSheet = ({ onSelect }: {
                             </SelectGroup>
                         </SelectContent>
                     </Select>
-
+ 
                 </SheetDescription>
             </SheetHeader>
 
